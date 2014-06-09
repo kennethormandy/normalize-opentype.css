@@ -1,0 +1,31 @@
+{
+  "name": "normalize-opentype",
+  "version": "0.0.1",
+  "description": "Normalize advanced typographic features",
+  "homepage": "https://normalize-opentype.kennethormandy.com",
+  "author": "Kenneth Ormandy <kenneth@chloi.io>",
+  "license": "MIT",
+  "private": true,
+  "repository": "git@github.com:kennethormandy/normalize-opentype.git",
+  "keywords": [
+    "normalize",
+    "type",
+    "typography",
+    "opentype",
+    "fonts",
+    "css"
+  ],
+  "scripts": {
+    "build-css": "node-sass normalize-opentype.scss -o normalize-opentype.css",
+    "build-prefix": "autoprefixer normalize-opentype.css",
+    "build": "npm run build-css && npm run build-prefix",
+    "test": "open test/index.html"
+  },
+  "dependencies": {
+    "normalize.css": "<4.0.0"
+  },
+  "devDependencies": {
+    "node-sass": "~0.9.2",
+    "autoprefixer": "~1.1.20140605"
+  }
+}

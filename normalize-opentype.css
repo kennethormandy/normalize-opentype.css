@@ -1,0 +1,96 @@
+/*! normalize-opentype v0.0.1 | MIT License | normalize-opentype.kennethormandy.com */
+/**
+ * Base
+ */
+html, body {
+  text-rendering: optimizeLegibility;
+  /* Look into wider implications */
+  -webkit-font-feature-settings: "kern" 1, "liga" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 0, "aalt" 0, "calt" 0, "salt", 0;
+  -moz-font-feature-settings: "kern" 1, "liga" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 0, "aalt" 0, "calt" 0, "salt", 0;
+  font-feature-settings: "kern" 1, "liga" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 0, "aalt" 0, "calt" 0, "salt", 0; }
+
+/**
+ * Headings
+ */
+h1, h2, h3 {
+  -webkit-font-feature-settings: "kern" 1, "liga" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 1;
+  -moz-font-feature-settings: "kern" 1, "liga" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 1;
+  font-feature-settings: "kern" 1, "liga" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 1; }
+
+h4, h5, h6 {
+  -webkit-font-feature-settings: "kern" 1, "liga" 0, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 0;
+  -moz-font-feature-settings: "kern" 1, "liga" 0, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 0;
+  font-feature-settings: "kern" 1, "liga" 0, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 0; }
+
+/**
+ * Abbreviations
+ */
+abbr {
+  -webkit-font-feature-settings: "kern" 1, "liga" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "smcp" 1, "c2sc" 1;
+  -moz-font-feature-settings: "kern" 1, "liga" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "smcp" 1, "c2sc" 1;
+  font-feature-settings: "kern" 1, "liga" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "smcp" 1, "c2sc" 1;
+  /* Supports queries for font-feature-settings, otherwise font variant small-caps? */ }
+
+/**
+ * “Numerics”
+ */
+time {
+  /* always tnum, sometimes onum and sometimes lnum */
+  -webkit-font-feature-settings: "kern" 1, "liga" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0;
+  -moz-font-feature-settings: "kern" 1, "liga" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0;
+  font-feature-settings: "kern" 1, "liga" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0; }
+
+/*
+kbd,
+samp
+*/
+pre, code, table {
+  /* Always tabular, probably always lining */
+  -webkit-font-feature-settings: "kern" 0, "liga" 1, "pnum" 0, "tnum" 1, "onum" 0, "lnum" 1;
+  -moz-font-feature-settings: "kern" 0, "liga" 1, "pnum" 0, "tnum" 1, "onum" 0, "lnum" 1;
+  font-feature-settings: "kern" 0, "liga" 1, "pnum" 0, "tnum" 1, "onum" 0, "lnum" 1; }
+
+/* Possibly “normalize” `@font-face` declarations somehow? */
+/**
+*
+*/
+/**
+*
+*/
+/*
+ *
+ */
+/* proper counters with pnum and onum for uls though
+   small caps somewhere within definition lists?
+   proper bullet with unordered lists */
+/* Forms
+Probably use lining and tabluar numerals in some situations? What can I do with ranges, number inputs for example?
+Select, textarea, button input*/
+/* can do stuff like abbr[title], dfn[title] */
+/* According to Wikipedia: http://en.wikipedia.org/wiki/Non-English_usage_of_quotation_marks
+   This is also building on prior knowledge, which would be nice to cite. */
+:lang(cy) q {
+  quotes: '\2018' '\2019' '\201C' '\201D' '\2018' '\2019' '\201C' '\201D';
+  /*         ‘       ’       “       ”       ‘       ’       “       ”  */ }
+
+:lang(af) q, :lang(zh) q, :lang(en) q, :lang(en-us) q, :lang(eo) q, :lang(id) q, :lang(ga) q, :lang(ko) q, :lang(pt-br) q, :lang(th) q, :lang(tr) q {
+  quotes: '\201C' '\201D' '\2018' '\2019' '\201C' '\201D' '\2018' '\2019';
+  /*         “       ”       ‘       ’       “       ”       ‘       ’  */ }
+
+:lang(sq) q, :lang(bs) q {
+  quotes: '\201E' '\201C' '\2018' '\2019' '\201E' '\201C' '\2018' '\2019';
+  /*         „       “       ‘       ’       „       “       ‘       ’  */ }
+
+:lang(ar) q {
+  quotes: '\201D' '\201C';
+  /*         ”       “  */ }
+
+:lang(cs) q, :lang(de) q, :lang(sk) q, :lang(sl) q, :lang(sb) q, :lang(is) q {
+  quotes: '\201E' '\201C' '\201A' '\2018' '\201E' '\201C' '\201A' '\2018';
+  /*         „       “       ‚       ‘       „       “       ‚       ‘  */ }
+
+q:before {
+  content: open-quote; }
+
+q:after {
+  content: close-quote; }
