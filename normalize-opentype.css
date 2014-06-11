@@ -106,36 +106,6 @@ input[type="color"], input[type="date"], input[type="datetime"], input[type="dat
  */
 /* Localisation
 ========================================================================== */
-/**
- * According to Wikipedia: http://en.wikipedia.org/wiki/Non-English_usage_of_quotation_marks
- * This is built on prior knowledge, which I would like to find and cite
- */
-:lang(cy) q {
-  quotes: '\2018' '\2019' '\201C' '\201D' '\2018' '\2019' '\201C' '\201D';
-  /*         ‘       ’       “       ”       ‘       ’       “       ”  */ }
-
-:lang(af) q, :lang(zh) q, :lang(en) q, :lang(en-us) q, :lang(eo) q, :lang(id) q, :lang(ga) q, :lang(ko) q, :lang(pt-br) q, :lang(th) q, :lang(tr) q {
-  quotes: '\201C' '\201D' '\2018' '\2019' '\201C' '\201D' '\2018' '\2019';
-  /*         “       ”       ‘       ’       “       ”       ‘       ’  */ }
-
-:lang(sq) q, :lang(bs) q {
-  quotes: '\201E' '\201C' '\2018' '\2019' '\201E' '\201C' '\2018' '\2019';
-  /*         „       “       ‘       ’       „       “       ‘       ’  */ }
-
-:lang(ar) q {
-  quotes: '\201D' '\201C';
-  /*         ”       “  */ }
-
-:lang(cs) q, :lang(de) q, :lang(sk) q, :lang(sl) q, :lang(sb) q, :lang(is) q {
-  quotes: '\201E' '\201C' '\201A' '\2018' '\201E' '\201C' '\201A' '\2018';
-  /*         „       “       ‚       ‘       „       “       ‚       ‘  */ }
-
-q:before {
-  content: open-quote; }
-
-q:after {
-  content: close-quote; }
-
 /* Tables
 ========================================================================== */
 /**
