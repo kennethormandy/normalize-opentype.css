@@ -29,25 +29,31 @@ We love pull requests. Here’s a quick guide:
   ```bash
   git checkout -b fix-for-that-thing
   ```
-3. Commit a failing test for the bug:
+3. Add a failing test for the bug.
+
+  [Normalize-OpenType.css](https://github.com/kennethormandy/normalize-opentype.css) follows [Normalize.css](https://github.com/necolas/normalize.css)’s lead and uses [SUIT CSS’ test library](https://github.com/suitcss/components-test). Create a test case that shows the issue you discovered in `test/index.html`.
 
   ```bash
   git commit -am "Adds a failing test to demonstrate that thing"
   ```
 
-4. Commit a fix that makes the test pass:
+4. Add a fix that makes the test pass.
 
-  ```bash
-  git commit -am "Adds a fix for that thing!"
-  ```
-
-5. Run the tests:
+  Update the `normalize-opentype.scss` source file, and recompile it using `npm run build`. You can re-run the tests with:
 
   ```bash
   npm test
   ```
 
-6. If everything looks good, push to your fork:
+5. Commit the fix
+
+  If the UI test you wrote is now passing, commit the fix!
+
+  ```bash
+  git commit -am "Adds a fix for that thing"
+  ```
+
+6. Everything looks good, so push to your fork:
 
   ```bash
   git push origin fix-for-that-thing
