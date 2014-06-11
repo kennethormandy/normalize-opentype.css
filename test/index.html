@@ -76,15 +76,17 @@
   }
 
   .Test-custom--fira {
-    font-family: "Fira Sans OT";
+    font-family: "Fira Sans";
   }
 
   .Test-custom--firaMono {
-    font-family: "Fira Mono OT";
+    font-family: "Fira Mono";
   }
 
   .Test-custom--sourceSansPro {
     font-family: "Source Sans Pro";
+    font-family: "Klinic Slab";
+
   }
 
   .Test-custom--klinicSlab {
@@ -92,12 +94,10 @@
   }
 
   .Test-custom--ffskern0 {
-    color: red;
-    /* Not working to reset */
-    -webkit-font-feautre-settings: "kern" false !important;
-       -moz-font-feature-settings: "kern" false !important;
-        -ms-font-feature-settings: "kern" false !important;
-            font-feature-settings: "kern" false !important;
+    -webkit-font-feautre-settings: "kern" 0;
+       -moz-font-feature-settings: "kern" 0;
+        -ms-font-feature-settings: "kern" 0;
+            font-feature-settings: "kern" 0;
   }
 
   .Test-custom--ffstnum {
@@ -108,18 +108,17 @@
   }
 
   .Test-custom--ffslnum {
-    -webkit-font-feautre-settings: "lnum" true, "onum" false !important;
-       -moz-font-feature-settings: "lnum" true, "onum" false !important;
-        -ms-font-feature-settings: "lnum" true, "onum" false !important;
-            font-feature-settings: "lnum" true, "onum" false !important;
+    -webkit-font-feautre-settings: "lnum" 1, "onum" 0;
+       -moz-font-feature-settings: "lnum" 1, "onum" 0;
+        -ms-font-feature-settings: "lnum" 1, "onum" 0;
+            font-feature-settings: "lnum" 1, "onum" 0;
   }
 
   .Test-custom--ffsliga0 {
-    text-rendering: optimizeSpeed !important;
-    -webkit-font-feautre-settings: "liga" false;
-       -moz-font-feature-settings: "liga" false;
-        -ms-font-feature-settings: "liga" false;
-            font-feature-settings: "liga" false;
+    -webkit-font-feautre-settings: "liga" 0, "kern" 0;
+       -moz-font-feature-settings: "liga" 0, "kern" 0;
+        -ms-font-feature-settings: "liga" 0, "kern" 0;
+            font-feature-settings: "liga" 0, "kern" 0;
   }
 
   .Test-custom--mark {
@@ -136,10 +135,11 @@
   <h1 class="Test-title"><a href="https://github.com/kennethormandy/normalize-opentype.css">Normalize-OpenType.css</a>: UI tests</h1>
 
   <h2 class="Test-describe"><code>html, body</code></h2>
+  <!-- This test doesn’t really help right now
   <h3 class="Test-it">should choose to optimise for legibility (opinionated)</h3>
   <div class="Test-run">
-    <p style="letter-spacing: 10px;"><span class="Test-custom--mark">fl</span> <span class="Test-custom--ffsliga0">fl</span></p>
-  </div>
+    <p class="Test-custom--fira" style="text-rendering: optimizeSpeed; letter-spacing: 10px;"><span class="Test-custom--mark">fl</span> <span class="Test-custom--ffsliga0">fl</span></p>
+  </div> -->
 
   <h3 class="Test-it">should have basic ligatures (opinionated)</h3>
   <div class="Test-run">
@@ -151,42 +151,40 @@
     <p class="Test-custom--sourceSansPro" style="letter-spacing: 10px;">Different Ga<span class="Test-custom--mark">st</span>own flowers</p>
   </div>
 
-  <h3 class="Test-it">should have contextual alternates when <code>font-family</code> includes <code>cursive</code></h3>
+  <!-- <h3 class="Test-it">should have contextual alternates when <code>font-family</code> includes <code>cursive</code></h3>
   <div class="Test-run">
     <p style="font-family: cursive;">Haven’t aaactuallllly decided how to do this yet</p>
-  </div>
+  </div> -->
 
   <h3 class="Test-it">should have kerning turned on</h3>
   <div class="Test-run">
-    <p class="Test-custom--fira"><span class="Test-custom--ffskern0">control<br/>va HOHOHO hahaha kerning.</span><br/>va HOHOHO hahaha kerning.</p>
+    <p class="Test-custom--fira"><span class="Test-custom--ffskern0" style="border-right: 1px solid tomato">control<br/>AVATAR LT.</span><br/><span style="border-right: 1px solid tomato">AVATAR LT.</span></p>
   </div>
 
   <h3 class="Test-it">should have oldstyle numbers turned on</h3>
   <div class="Test-run">
-    <p class="Test-custom--fira"><span class="Test-custom--ffskern0 Test-custom--ffslnum">control 1990.</span> Old-Style 1990.</p>
+    <p class="Test-custom--fira"><span class="Test-custom--ffskern0 Test-custom--ffslnum">control 1990<span style="color: tomato">■</span>.</span> 1990<span style="color: tomato">■</span>.</p>
   </div>
 
   <h3 class="Test-it">should have proportional numbers turned on</h3>
   <div class="Test-run">
-    <p class="Test-custom--fira"><span class="Test-custom--ffskern0 Test-custom--ffstnum Test-custom-firaMono">control<br/>1990.</span><br/>1990.</p>
+    <p class="Test-custom--fira"><span class="Test-custom--ffstnum Test-custom-firaMono">control<br/><span style="border-right: 1px solid tomato">1990</span>.</span><br/><span style="border-right: 1px solid tomato">1990</span>.</p>
   </div>
 
   <h2 class="Test-describe"><code>h1</code>, <code>h2</code>, <code>h3</code>, <code>h4</code>, <code>h5</code>, <code>h6</code></h2>
   <h3 class="Test-it"><code>h1</code>, <code>h2</code>, <code>h3</code> should have discretionary ligatures in headings</h3>
   <div class="Test-run">
-    <h1 class="Test-custom--klinicSlab">st</h1>
-    <h2 class="Test-custom--klinicSlab">st</h2>
-    <h3 class="Test-custom--klinicSlab">st</h3>
+    <h1 class="Test-custom--klinicSlab">di<span class="Test-custom--mark">st</span></h1>
+    <h2 class="Test-custom--klinicSlab">di<span class="Test-custom--mark">st</span></h2>
+    <h3 class="Test-custom--klinicSlab">di<span class="Test-custom--mark">st</span></h3>
   </div>
 
   <h3 class="Test-it"><code>h4</code>, <code>h5</code>, <code>h6</code> should not have discretionary ligatures in headings</h3>
   <div class="Test-run">
-    <h4 class="Test-custom--klinicSlab">st</h4>
-    <h5 class="Test-custom--klinicSlab">st</h5>
-    <h6 class="Test-custom--klinicSlab">st</h6>
+    <h4 class="Test-custom--klinicSlab">di<span class="Test-custom--mark">st</span></h4>
+    <h5 class="Test-custom--klinicSlab">di<span class="Test-custom--mark">st</span></h5>
+    <h6 class="Test-custom--klinicSlab">di<span class="Test-custom--mark">st</span></h6>
   </div>
-
-
 
   <h2 class="Test-describe"><code>abbr</code></h2>
   <h3 class="Test-it">should sub lowercase letters for small caps</h3>
@@ -201,56 +199,50 @@
 
   <h3 class="Test-it">should not use faux small</h3>
   <div class="Test-run">
-    <p class="Test-custom--fira">CONTROL. <abbr>ABBR.</abbr></p>
-  </div>
-
-
-  <h2 class="Test-describe"><code>small</code></h2>
-  <h3 class="Test-it">should …?</h3>
-  <div class="Test-run">
-    <p class="Test-custom--fira">control. <small>small.</small></p>
+    <p style="font-family: Georgia">CONTROL. <abbr>ABBR.</abbr></p>
   </div>
 
   <h2 class="Test-describe"><code>time</code></h2>
   <h3 class="Test-it">should use oldstyle figures</h3>
   <div class="Test-run">
-    <p class="Test-custom--fira"><span class="Test-custom--ffslnum">control June 24 2014, 19:00.</span> <time datetime="2014-06-24T19:00:00Z">June 24 2014, 19:00</time></p>
+    <p class="Test-custom--fira"><span class="Test-custom--ffslnum">control June 24 2014, 19:00<span style="color: tomato">■</span>.</span> <time datetime="2014-06-24T19:00:00Z">June 24 2014, 19:00<span style="color: tomato">■</span>.</time></p>
   </div>
 
   <h3 class="Test-it">should use proportional figures</h3>
   <div class="Test-run">
-    <p class="Test-custom--fira">control<br/><span class="Test-custom--ffstnum">June 24 2014, 19:00.<span><br/>
-    <time datetime="2014-06-24T19:00:00Z">June 24 2014, 19:00.</time></p>
+    <p class="Test-custom--fira">control<br/><span class="Test-custom--ffstnum" style="border-right: 1px solid tomato">June 24 2014, 19:00.</span><br/>
+    <time datetime="2014-06-24T19:00:00Z" style="border-right: 1px solid tomato">June 24 2014, 19:00.</time></p>
   </div>
 
-  <h2 class="Test-describe"><code>mark</code></h2>
+  <!-- <h2 class="Test-describe"><code>mark</code></h2>
   <h3 class="Test-it">should …?</h3>
   <div class="Test-run">
     <p class="Test-custom--fira">control. <mark>mark</mark></p>
-  </div>
+  </div> -->
 
-  <h2 class="Test-describe"><code>cite</code></h2>
+  <!-- <h2 class="Test-describe"><code>cite</code></h2>
   <h3 class="Test-it">should …?</h3>
   <div class="Test-run">
     <p class="Test-custom--fira">control. <cite>cite</cite></p>
-  </div>
+  </div> -->
 
-  <h2 class="Test-describe"><code>blockquote</code>, <code>q</code></h2>
+  <!-- <h2 class="Test-describe"><code>blockquote</code>, <code>q</code></h2>
   <h3 class="Test-it">should …?</h3>
   <div class="Test-run">
     <p class="Test-custom--fira">control. <q>It always comes back to type.</q></p>
     <p class="Test-custom--fira">control. <blockquote>It always comes back to type.</blockquote></p>
-  </div>
+  </div> -->
 
+  <!-- This test is insufficient. Should make sub and sup chars the same size and compare -->
   <h2 class="Test-describe"><code>sub</code> and <code>sup</code></h2>
-  <h3 class="Test-it">should …?</h3>
+  <h3 class="Test-it">should use proper superscript and subscript characters</h3>
   <div class="Test-run Test-run--highlightEl">
     <p class="Test-custom--fira">control.</p>
     <p class="Test-custom--fira">control. <sub>sub.</sub></p>
     <p class="Test-custom--fira">control. <sup>sup.</sup></p>
   </div>
 
-  <h2 class="Test-describe"><code>figcaption</code></h2>
+  <!-- <h2 class="Test-describe"><code>figcaption</code></h2>
   <h3 class="Test-it">should …?</h3>
   <div class="Test-run" style="outline:1px solid #ADD8E6; overflow:hidden;">
     <figure>
@@ -260,27 +252,26 @@
       A blue shape. The quick brown fox and all that.
       <p>Hello, this is some other stuff inside a paragraph.</p>
     </figcaption>
-  </div>
+  </div> -->
 
   <h2 class="Test-describe"><code>code</code>, <code>kbd</code>, <code>pre</code>, <code>samp</code></h2>
   <h3 class="Test-it">should not use kerning</h3>
   <div class="Test-run">
-    <span class="Test-custom--firaMono">span: abcdefghijklmnopqrstuvwxyz.</span><br>
-    <code class="Test-custom--firaMono">code: abcdefghijklmnopqrstuvwxyz.</code><br>
-    <kbd class="Test-custom--firaMono">kbd: abcdefghijklmnopqrstuvwxyz.</kbd><br>
-    <samp class="Test-custom--firaMono">samp: abcdefghijklmnopqrstuvwxyz.</samp>
-    <pre class="Test-custom--firaMono">pre: abcdefghijklmnopqrstuvwxyz.</pre>
+    <span class="Test-custom--firaMono" style="border-right: 1px solid green">span: abcdefghijklmnopqrstuvwxyz.</span><br/>
+    <code class="Test-custom--firaMono" style="border-right: 1px solid green">code: abcdefghijklmnopqrstuvwxyz.</code><br/>
+    <kbd class="Test-custom--firaMono" style="border-right: 1px solid green">kbd: &nbsp;abcdefghijklmnopqrstuvwxyz.</kbd><br/>
+    <samp class="Test-custom--firaMono" style="border-right: 1px solid green">samp: abcdefghijklmnopqrstuvwxyz.</samp><br/>
+    <pre class="Test-custom--firaMono" style="display: inline; border-right: 1px solid green">pre:  abcdefghijklmnopqrstuvwxyz.</pre>
   </div>
 
   <h3 class="Test-it">should not use ligatures</h3>
   <div class="Test-run">
-    <span class="Test-custom--firaMono">span: ffl fl fk st.</span><br>
-    <code class="Test-custom--firaMono">code: ffl fl fk st.</code><br>
-    <kbd class="Test-custom--firaMono">kbd: ffl fl fk st.</kbd><br>
-    <samp class="Test-custom--firaMono">samp: ffl fl fk st.</samp>
-    <pre class="Test-custom--firaMono">pre: ffl fl fk st.</pre>
+    <span class="Test-custom--firaMono" style="border-right: 1px solid green">span: ffl fl fk st.</span><br/>
+    <code class="Test-custom--firaMono" style="border-right: 1px solid green">code: ffl fl fk st.</code><br/>
+    <kbd class="Test-custom--firaMono" style="border-right: 1px solid green">kbd: &nbsp;ffl fl fk st.</kbd><br/>
+    <samp class="Test-custom--firaMono" style="border-right: 1px solid green">samp: ffl fl fk st.</samp><br/>
+    <pre class="Test-custom--firaMono" style="display: inline; border-right: 1px solid green">pre:  ffl fl fk st.</pre>
   </div>
-
 
   <h2 class="Test-describe"><code>ol</code></h2>
   <h3 class="Test-it">should use oldstyle numbers on ordered list items</h3>
@@ -301,18 +292,17 @@
     </ol>
   </div>
 
-  <h2 class="Test-describe"><code>ul</code></h2>
+  <!-- <h2 class="Test-describe"><code>ul</code></h2>
   <h3 class="Test-it">should …?</h3>
-  <!-- hanging bullets or no? -->
   <div class="Test-run">
     <ul class="Test-custom--fira">
       <li>Matthew</li>
       <li>Sarah</li>
       <li>Kenneth</li>
     </ul>
-  </li>
+  </li> -->
 
-  <h2 class="Test-describe"><code>dfn</code></h2>
+  <!-- <h2 class="Test-describe"><code>dfn</code></h2> -->
   <!-- research -->
 
 

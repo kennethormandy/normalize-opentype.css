@@ -1,148 +1,168 @@
 /*! normalize-opentype v0.0.1 | MIT License | normalize-opentype.kennethormandy.com */
 
 /**
- * Base
+ * 1. Necessary “opt in” to font-feature-settings
+ * 2. Turn on kerning, standard ligatures, and proportional, oldstyle numerals
+ *    Turn off all other ligatures, tabular, lining numerals, and alternates
  */
 
 html,
 body {
-  text-rendering: optimizeLegibility; /* Look into wider implications */
-  font-feature-settings: "kern" 1, "liga" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 0, "aalt" 0, "calt" 0, "salt", 0;
+  text-rendering: optimizeLegibility; /* 1. */
+  font-feature-settings: "kern" 1, "liga" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 0; /* 2 */
 }
 
+/* Headings
+========================================================================== */
+
 /**
- * Headings
+ * 1. Turn on discretionary ligatures for larger headings
  */
 
 h1,
 h2,
 h3 {
-  font-feature-settings: "kern" 1, "liga" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 1;
+  font-feature-settings: "kern" 1, "liga" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 1; /* 1. */
 }
 
-h4,
-h5,
-h6 {
-  font-feature-settings: "kern" 1, "liga" 0, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 0;
-}
+/* Text-level semantics
+========================================================================== */
 
 /**
- * Abbreviations
+ * 1. Change all letters to lowercase
+ * 2. Turn on small caps for upper and lowercase letters
  */
 
 abbr {
-  font-feature-settings: "kern" 1, "liga" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "smcp" 1, "c2sc" 1;
-  /* Supports queries for font-feature-settings, otherwise font variant small-caps? */
+  text-transform: lowercase; /* 1 */
+  font-feature-settings: "kern" 1, "liga" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "smcp" 1, "c2sc" 1; /* 2 */
 }
 
-/**
- * “Numerics”
+/*
+ * TODO: Turn on diagonal fractions where appropriate
  */
 
 time {
-  /* always tnum, sometimes onum and sometimes lnum */
   font-feature-settings: "kern" 1, "liga" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0;
 }
 
 /*
-kbd,
-samp
-*/
+ * 1. Turn off kerning and ligatures,
+ *    Turn on lining, tabular numerals, slashed zero
+ */
+
 pre,
-code,
-table {
-  /* Always tabular, probably always lining */
-  font-feature-settings: "kern" 0, "liga" 1, "pnum" 0, "tnum" 1, "onum" 0, "lnum" 1;
+kbd,
+samp,
+code {
+  font-feature-settings: "kern" 0, "liga" 0, "dlig" 0, "pnum" 0, "tnum" 1, "onum" 0, "lnum" 1, "zero" 1; /* 1. */
 }
-
-table thead,
-table tfoot {
-
-}
-
-/* Possibly “normalize” `@font-face` declarations somehow? */
 
 mark {
 }
 
-/**
-*
-*/
-
 small {
 }
 
+cite {
+}
+
 /**
-*
-*/
-
-sub, sup {
-  /* What are the proper OpenType settings for sub and superscript? */
-
-}
-
-sub {
-
-}
+ * 1. Turn on proper supercript numerals
+ */
 
 sup {
-
+  font-feature-settings: "kern" 1, "liga" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 0, "sups" 1; /* 1. */
 }
+
+/**
+ * 1. Turn on proper subscript numerals
+ */
+
+sub {
+  font-feature-settings: "kern" 1, "liga" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 0, "subs" 1; /* 1. */
+}
+
+
+/* Grouping content
+========================================================================== */
 
 figcaption {
-
 }
-
-cite {
-
-}
-
-/*
- *
- */
 
 blockquote,
 q {
-
 }
 
-/* proper counters with pnum and onum for uls though
-   small caps somewhere within definition lists?
-   proper bullet with unordered lists */
+/**
+ * TODO: Adds proper bullets
+ */
 
-ul,
-ol,
+ul {
+}
+
+/*
+ * TODO:
+ * 1. Adds counters for lists
+ * 2. Use proper numerals for lists
+ */
+
+ol {
+}
+
+/**
+ * Adds proper small caps
+ */
+
 dl,
 dd,
 dl,
-dt {
-
+dt,
+dfn {
 }
 
-dfn,
-mark,
-ins,
-del {
-
-}
+/**
+ * TODO: scmp, sc2c, pnum, case sensitive forms for postal codes
+ */
 
 address {
-  /* figure out how to do postal codes properly */
 }
 
+
 /* Forms
-Probably use lining and tabluar numerals in some situations? What can I do with ranges, number inputs for example?
-Select, textarea, button input*/
+========================================================================== */
 
-/* can do stuff like abbr[title], dfn[title] */
+/**
+ * 1. Turns on lining numerals
+ */
 
-/* According to Wikipedia: http://en.wikipedia.org/wiki/Non-English_usage_of_quotation_marks
-   This is also building on prior knowledge, which would be nice to cite. */
-// :lang(en) q,
+input[type="color"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="numer"],
+input[type="range"],
+input[type="tel"],
+input[type="week"], {
+  font-feature-settings: "kern" 0, "liga" 1, "pnum" 0, "tnum" 0, "onum" 0, "lnum" 1, "zero" 1; /* 1. */
+}
+
+/**
+ * TODO: Input modes
+ * https://developer.mozilla.org/en/docs/Web/HTML/Element/Input#attr-inputmode
+ */
+
+/* Localisation
+========================================================================== */
+
+/**
+ * According to Wikipedia: http://en.wikipedia.org/wiki/Non-English_usage_of_quotation_marks
+ * This is built on prior knowledge, which I would like to find and cite
+ */
+
 :lang(cy) q {
   quotes: '\2018' '\2019' '\201C' '\201D' '\2018' '\2019' '\201C' '\201D';
   /*         ‘       ’       “       ”       ‘       ’       “       ”  */
-
 }
 
 :lang(af) q,
@@ -158,20 +178,17 @@ Select, textarea, button input*/
 :lang(tr) q {
   quotes: '\201C' '\201D' '\2018' '\2019' '\201C' '\201D' '\2018' '\2019';
   /*         “       ”       ‘       ’       “       ”       ‘       ’  */
-
 }
 
 :lang(sq) q,
 :lang(bs) q {
   quotes: '\201E' '\201C' '\2018' '\2019' '\201E' '\201C' '\2018' '\2019';
   /*         „       “       ‘       ’       „       “       ‘       ’  */
-
 }
 
 :lang(ar) q {
   quotes: '\201D' '\201C';
   /*         ”       “  */
-
 }
 
 :lang(cs) q,
@@ -182,7 +199,6 @@ Select, textarea, button input*/
 :lang(is) q {
   quotes: '\201E' '\201C' '\201A' '\2018' '\201E' '\201C' '\201A' '\2018';
   /*         „       “       ‚       ‘       „       “       ‚       ‘  */
-
 }
 
 q:before {
@@ -191,4 +207,26 @@ q:before {
 
 q:after {
   content: close-quote;
+}
+
+
+/* Tables
+========================================================================== */
+
+/**
+ * 1. Turns on tabular, lining numerals and slashed zero
+ *    Turns off kerning, as it could impact tabular numerals
+ */
+
+table {
+  font-feature-settings: "kern" 0, "liga" 1, "pnum" 0, "tnum" 1, "onum" 0, "lnum" 1, "zero" 1; /* 1. */
+}
+
+/**
+ * 1. Revert to defaults for table headings
+ */
+
+table thead,
+table tfoot {
+  font-feature-settings: "kern" 1, "liga" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 0; /* 2. */
 }
