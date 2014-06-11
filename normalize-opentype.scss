@@ -29,12 +29,12 @@ h3 {
 ========================================================================== */
 
 /**
- * 1. Change all letters to lowercase
+ * 1. Change all letters to uppercase
  * 2. Turn on small caps for upper and lowercase letters
  */
 
 abbr {
-  text-transform: lowercase; /* 1 */
+  text-transform: uppercase; /* 1 */
   font-feature-settings: "kern" 1, "liga" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "smcp" 1, "c2sc" 1; /* 2 */
 }
 
