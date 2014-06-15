@@ -1,6 +1,6 @@
 {
   "name": "normalize-opentype",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Add sound OpenType defaults to Normalize.css",
   "homepage": "http://kennethormandy.com/journal/normalize-opentype-css",
   "author": "Kenneth Ormandy <kenneth@chloi.io>",
