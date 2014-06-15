@@ -1,4 +1,4 @@
-[![Normalize-OpenType.css wordmark](wordmark.svg)](https://github.com/kennethormandy/normalize-opentype)
+[![Normalize-OpenType.css wordmark](wordmark.png)](https://github.com/kennethormandy/normalize-opentype)
 
 ***
 
