@@ -4,6 +4,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Normalize OpenType: UI tests</title>
 <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro|Fira+Mono|Fira+Sans&subset=latin,latin-ext" rel="stylesheet" />
 <link href="../node_modules/normalize.css/normalize.css" rel="stylesheet" />
 <link href="../normalize-opentype.css" rel="stylesheet" />
 <style>
@@ -85,11 +86,10 @@
 
   .Test-custom--sourceSansPro {
     font-family: "Source Sans Pro";
-    font-family: "Klinic Slab";
-
   }
 
   .Test-custom--klinicSlab {
+    /* TODO Use something on Google Fonts with an “st” ligature */
     font-family: "Klinic Slab";
   }
 
@@ -124,8 +124,6 @@
   .Test-custom--mark {
     background: tomato;
   }
-
-
 
 </style>
 
