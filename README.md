@@ -1,14 +1,11 @@
-<!--
-[![A great header image you designed, or collaborated on with a designer you work with. It’ll look best when it’s 728px wide, @2x for hi-dpi devices.](preview.png)](https://github.com/kennethormandy/normalize-opentype)
+[![Normalize-OpenType.css wordmark](wordmark.svg)](https://github.com/kennethormandy/normalize-opentype)
 
 ***
--->
 
-# normalize-opentype.css
+# Normalize-OpenType.css
 
-Add sound OpenType defaults to [Normalize.css](https://github/necolas/normalize.css).
+Add sound OpenType defaults to [Normalize.css](https://github/necolas/normalize.css). Read about it in [Font-feature-settings’ five stages of greif, or introducing Normalize-OpenType.css](http://kennethormandy.com/journal/normalize-opentype-css).
 
-CSS cascades by nature, so when a certain property interrupt that core principle, it can be very disruptive. Unfortunately, due to browser support, this is the case with a great feature of CSS3: `font-feature-settings`.
 <!-- Etc. What font feature settings is, why the cascading isn’t there, how this helps. -->
 
 ## Installation
@@ -38,10 +35,14 @@ bower install normalize-opentype.css
 
 ## Examples
 
+Though technically Normalize-OpenType.css is not dependent on Normalize.css, the intent expectation is that the former would not be used without the latter. If you’re dropping in stylesheets:
+
 ```html
 <link src="css/normalize.css" rel="stylesheet" />
 <link src="css/normalize-opentype.css" rel="stylesheet" />
 ```
+
+If you’re using a preprocessor through something like [Harp](http://harpjs.com), you can import the files instead.
 
 ### With SCSS
 
@@ -49,6 +50,12 @@ bower install normalize-opentype.css
 @import "normalize";
 @import "normalize-opentype";
 ```
+
+## Contributing
+
+Thanks for considering contributing! There’s information about how to [get started with normalize-opentype here](CONTRIBUTING.md).
+
+If you’re new to all this GitHub, Open Source, JavaScript, Node.js, testing, wow all this stuff seems really difficult I just want to make my sites better stuff, I get it. I’m still there, too. Feel free to [send me an email](mailto:kenneth@chloi.io) or [open an issue here](http://github.com/kennethormandy/normalize-opentype.css/issues) and I’ll do my best to share some resources that have helped me out.
 
 ## Running locally
 
@@ -69,14 +76,6 @@ To view the tests:
 ```bash
 npm test
 ```
-
-## Contributing
-
-Thanks for considering contributing! There’s information about how to [get started with normalize-opentype here](CONTRIBUTING.md).
-
-If you’re new to all this GitHub, Open Source, JavaScript, Node.js, testing, wow all this stuff seems really difficult I just want to make my sites better stuff, I get it. I’m still there, too.
-
-Feel free to [send me an email](mailto:kenneth@chloi.io) or [open an issue here](http://github.com/kennethormandy/normalize-opentype.css/issues) and I’ll do my best to share some resources that have helped me out. No promises—I’m still learning, too—but I can say it would be great to have you stay around, or be involved in any capacity, if you’re interested.
 
 ## License
 

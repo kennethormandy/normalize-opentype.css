@@ -2,7 +2,7 @@
   "name": "normalize-opentype",
   "version": "0.0.1",
   "description": "Normalize advanced typographic features",
-  "homepage": "https://normalize-opentype.kennethormandy.com",
+  "homepage": "http://kennethormandy.com/journal/normalize-opentype-css",
   "author": "Kenneth Ormandy <kenneth@chloi.io>",
   "license": "MIT",
   "private": true,
