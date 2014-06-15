@@ -17,7 +17,6 @@ Add sound OpenType defaults to [Normalize.css](https://github/necolas/normalize.
 ```
 npm install kennethormandy/normalize-opentype.css
 ```
-<!--
 
 ### With Component
 
@@ -30,8 +29,6 @@ component install kennethormandy/normalize-opentype.css
 ```bash
 bower install normalize-opentype.css
 ```
-
--->
 
 ## Examples
 

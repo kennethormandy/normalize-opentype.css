@@ -1,7 +1,7 @@
 {
   "name": "normalize-opentype",
   "version": "0.0.1",
-  "description": "Normalize advanced typographic features",
+  "description": "Add sound OpenType defaults to Normalize.css",
   "homepage": "http://kennethormandy.com/journal/normalize-opentype-css",
   "author": "Kenneth Ormandy <kenneth@chloi.io>",
   "license": "MIT",

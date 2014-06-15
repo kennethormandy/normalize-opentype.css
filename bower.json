@@ -1,0 +1,26 @@
+{
+  "name": "normalize-opentype.css",
+  "version": "0.0.1",
+  "homepage": "http://kennethormandy.com/journal/normalize-opentype-css",
+  "authors": [
+    "Kenneth Ormandy <kenneth@chloi.io>"
+  ],
+  "description": "Add sound OpenType defaults to Normalize.css",
+  "main": "normalize-opentype.css",
+  "keywords": [
+    "normalize",
+    "type",
+    "typography",
+    "opentype",
+    "fonts",
+    "css"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "components",
+    "test"
+  ]
+}

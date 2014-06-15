@@ -1,0 +1,19 @@
+{
+  "name": "normalize-opentype.css",
+  "repo": "kennethormandy/normalize-opentype.css",
+  "description": "Add sound OpenType defaults to Normalize.css",
+  "version": "0.0.1",
+  "keywords": [
+    "normalize",
+    "type",
+    "typography",
+    "opentype",
+    "fonts",
+    "css"
+  ],
+  "development": {},
+  "license": "MIT",
+  "styles": [
+    "normalize-opentype.css"
+  ]
+}
