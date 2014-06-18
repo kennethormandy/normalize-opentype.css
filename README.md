@@ -4,7 +4,9 @@
 
 # Normalize-OpenType.css
 
-Add sound OpenType defaults to [Normalize.css](https://github/necolas/normalize.css). Read why it exists in [Font-feature-settings’ five stages of greif, or introducing Normalize-OpenType.css](http://kennethormandy.com/journal/normalize-opentype-css).
+Adds OpenType features—ligatures, kerning, and more—to [Normalize.css](https://github/necolas/normalize.css).
+
+Read the blog post: [Introducing Normalize-OpenType.css](http://kennethormandy.com/journal/normalize-opentype-css)
 
 ## Ligatures
 
@@ -36,7 +38,9 @@ There’s more optimisations included, so you don’t have to think about them: 
 
 ## Caveats
 
-This library does this best it can with what it has, but to recieve all these optimisations, these characters must be available in the font you are using. There are some potential stumbling blocks depending on where you are serving fonts from. For more details, see [Font-feature-settings’ five stages of greif, or introducing Normalize-OpenType.css](http://kennethormandy.com/journal/normalize-opentype-css).
+This library does the best it can with what it has. In order to use any of these optimisations, they must also be available in the font you are using.
+
+There are some potential stumbling blocks depending on where you are serving fonts from. For more details, see [Font-feature-settings’ five stages of grief, or introducing Normalize-OpenType.css](http://kennethormandy.com/journal/normalize-opentype-css).
 
 
 ## Getting started
