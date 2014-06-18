@@ -42,12 +42,13 @@ There’s more optimisations included, so you don’t have to think about them: 
 
 This library does the best it can with what it has. In order to use any of these optimisations, they must also be available in the font you are using.
 
-There are some potential stumbling blocks depending on where you are serving fonts from. For more details, see [Font-feature-settings’ five stages of grief, or introducing Normalize-OpenType.css](http://kennethormandy.com/journal/normalize-opentype-css).
-
+There are some potential stumbling blocks depending on where you are serving fonts from. For more details, see [the introductory blog post](http://kennethormandy.com/journal/normalize-opentype-css).
 
 ## Getting started
 
 Normalize-OpenType.css aims to be as easy to use as its namesake: [get the latest version of the CSS file](https://raw.githubusercontent.com/kennethormandy/normalize-opentype.css/master/normalize-opentype.css) or use the package manager of your choice, include the CSS file, and you’re done.
+
+If it’s not that easy, please [open an issue](https://github.com/kennethormandy/normalize-opentype.css/issues).
 
 #### With npm
 
