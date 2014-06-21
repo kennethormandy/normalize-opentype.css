@@ -1,15 +1,13 @@
 /*! normalize-opentype v0.1.0 | MIT License | kennethormandy.com/journal/normalize-opentype-css */
 
 /**
- * 1. Necessary “opt in” to font-feature-settings
- * 2. Turn on kerning, standard ligatures, and proportional, oldstyle numerals
+ * 1. Turn on kerning, standard ligatures, and proportional, oldstyle numerals
  *    Turn off all other ligatures, tabular, lining numerals, and alternates
  */
 
 html,
 body {
-  text-rendering: optimizeLegibility; /* 1. */
-  font-feature-settings: "kern" 1, "liga" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 0; /* 2 */
+  font-feature-settings: "kern" 1, "liga" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 0; /* 1. */
 }
 
 /* Headings
