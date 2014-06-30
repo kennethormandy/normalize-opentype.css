@@ -4,7 +4,7 @@
 
 # Normalize-OpenType.css
 
-Adds OpenType features—ligatures, kerning, and more—to [Normalize.css](https://github/necolas/normalize.css).
+Adds OpenType features—ligatures, kerning, and more—to [Normalize.css](https://github.com/necolas/normalize.css).
 
 Read the blog post: [Introducing Normalize-OpenType.css](http://kennethormandy.com/journal/normalize-opentype-css)
 
