@@ -89,18 +89,15 @@ sub {
 /* Forms
 ========================================================================== */
 /**
- * 1. Turns on lining numerals
+ * 1. Turns on lining, proportional numerals without clarified zeroes
+ * TODO: Additional input modes https://developer.mozilla.org/en/docs/Web/HTML/Element/Input#attr-inputmode
  */
-input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="numer"], input[type="range"], input[type="tel"], input[type="week"] {
-  -webkit-font-feature-settings: "kern" 0, "liga" 1, "pnum" 0, "tnum" 0, "onum" 0, "lnum" 1, "zero" 1;
-  -moz-font-feature-settings: "kern" 0, "liga" 1, "pnum" 0, "tnum" 0, "onum" 0, "lnum" 1, "zero" 1;
-  font-feature-settings: "kern" 0, "liga" 1, "pnum" 0, "tnum" 0, "onum" 0, "lnum" 1, "zero" 1;
+input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="number"], input[type="range"], input[type="tel"], input[type="week"] {
+  -webkit-font-feature-settings: "kern" 0, "liga" 1, "pnum" 1, "tnum" 0, "onum" 0, "lnum" 1, "zero" 0;
+  -moz-font-feature-settings: "kern" 0, "liga" 1, "pnum" 1, "tnum" 0, "onum" 0, "lnum" 1, "zero" 0;
+  font-feature-settings: "kern" 0, "liga" 1, "pnum" 1, "tnum" 0, "onum" 0, "lnum" 1, "zero" 0;
   /* 1. */ }
 
-/**
- * TODO: Input modes
- * https://developer.mozilla.org/en/docs/Web/HTML/Element/Input#attr-inputmode
- */
 /* Localisation
 ========================================================================== */
 /* Tables

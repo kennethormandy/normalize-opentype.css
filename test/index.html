@@ -107,7 +107,15 @@
             font-feature-settings: "tnum" 0;
   }
 
-  .Test-custom--ffslnum {
+  .Test-custom--ffsonum {
+    -webkit-font-feature-settings: "lnum" 0, "onum" 1, "pnum" 1, "tnum" 0 !important;
+       -moz-font-feature-settings: "lnum" 0, "onum" 1, "pnum" 1, "tnum" 0 !important;
+        -ms-font-feature-settings: "lnum" 0, "onum" 1, "pnum" 1, "tnum" 0 !important;
+            font-feature-settings: "lnum" 0, "onum" 1, "pnum" 1, "tnum" 0 !important;
+  }
+
+
+ style="color: tomato"  .Test-custom--ffslnum {
     -webkit-font-feature-settings: "lnum" 1, "onum" 0;
        -moz-font-feature-settings: "lnum" 1, "onum" 0;
         -ms-font-feature-settings: "lnum" 1, "onum" 0;
@@ -307,6 +315,50 @@
   <!-- <h2 class="Test-describe"><code>dfn</code></h2> -->
   <!-- research -->
 
+  <h2 class="Test-describe"><code>inputs</code></h2>
+  <h3 class="Test-it">should use lining, proportional numerals for color input fallbacks</h3>
+  <div class="Test-run">
+    <!-- This is only relevant in browsers that support font-feature-settings but not the colour input type -->
+    <label>Control<input type="color" value="#339966" class="Test-custom--fira Test-custom--ffsonum" />.</label><br/>
+    <label><input type="color" value="#339966" class="Test-custom--fira" />.</label>
+  </div>
+
+  <h3 class="Test-it">should use lining, proportional numerals on date inputs</h3>
+  <div class="Test-run">
+    <label>Control<input type="date" value="2014-07-03" class="Test-custom--fira Test-custom--ffsonum" />.</label><br/>
+    <label><input type="date" value="2014-07-03" class="Test-custom--fira" />.</label>
+    <br/>
+    <label>Control<input type="datetime" value="2014-07-03" class="Test-custom--fira Test-custom--ffsonum" />.</label><br/>
+    <label><input type="datetime" value="2014-07-03" class="Test-custom--fira" />.</label>
+    <br/>
+    <label>Control<input type="datetime-local" value="2014-07-03" class="Test-custom--fira Test-custom--ffsonum" />.</label><br/>
+    <label><input type="datetime-local" value="2014-07-03" class="Test-custom--fira" />.</label>
+  </div>
+
+  <h3 class="Test-it">should use lining, proportional numerals on number inputs</h3>
+  <div class="Test-run">
+    <label>Control<input type="date" value="55-604" class="Test-custom--fira Test-custom--ffsonum" />.</label><br/>
+    <label><input type="date" value="55-604" class="Test-custom--fira" />.</label>
+  </div>
+
+  <!-- Need to check this in IE10+ still -->
+  <h3 class="Test-it">should use lining, proportional numerals on range inputs’ tooltip</h3>
+  <div class="Test-run">
+    <label>Control<input type="range" value="50" class="Test-custom--fira Test-custom--ffsonum" />.</label><br/>
+    <label><input type="range" value="50" class="Test-custom--fira" />.</label>
+  </div>
+
+  <h3 class="Test-it">should use lining, proportional numerals on telephone inputs</h3>
+  <div class="Test-run">
+    <label>Control<input type="tel" value="+1 234 567 8910" class="Test-custom--fira Test-custom--ffsonum" />.</label><br/>
+    <label><input type="tel" value="+1 234 567 8910" class="Test-custom--fira" />.</label>
+  </div>
+
+  <h3 class="Test-it">should use lining, proportional numerals on week inputs</h3>
+  <div class="Test-run">
+    <label>Control<input type="tel" value="23" class="Test-custom--fira Test-custom--ffsonum" />.</label><br/>
+    <label><input type="tel" value="23" class="Test-custom--fira" />.</label>
+  </div>
 
   <h2 class="Test-describe"><code>table</code></h2>
   <h3 class="Test-it">should use lining, tabular numerals</h3>
