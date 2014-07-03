@@ -1,4 +1,4 @@
-[![Normalize-OpenType.css wordmark](wordmark.png)](http://kennethormandy.com/journal/normalize-opentype-css)
+[![Normalize-OpenType.css wordmark](assets/wordmark.png)](http://kennethormandy.com/journal/normalize-opentype-css)
 
 ***
 
@@ -12,27 +12,27 @@ Read the blog post: [Introducing Normalize-OpenType.css](http://kennethormandy.c
 
 First, normalize basic ligatures across browsers, and then get fancier, discretionary ligatures on `<h1>`, `<h2>`, and `<h3>`s.
 
-![An example of basic and discretionary ligatures.](examples/example-1.png)
+![An example of basic and discretionary ligatures.](assets/example-1.png)
 
 ## Numerals
 
 Different situations require different numerals, depending on the context. Normalize-OpenType.css takes care of this for you, so you don’t need to know what combination of Proportional, Lining, Tabular, and Old-Style numerals you need to use.
 
-![An example of old-style, proportional numerals.](examples/example-2.png)
+![An example of old-style, proportional numerals.](assets/example-2.png)
 
-![An example of tabular, lining numerals.](examples/example-3.png)
+![An example of tabular, lining numerals.](assets/example-3.png)
 
 ## Small Capitals
 
 Regular capitals draw a lot of attention in body copy. With Normalize-OpenType.css, anything wrapped in `<abbr>` will use small capitals instead. This works especially well with [Typogr.js](https://github.com/ekalinin/typogr.js) and equivalents.
 
-![An example of small capitals.](examples/example-4.png)
+![An example of small capitals.](assets/example-4.png)
 
 ## Kerning
 
 Kerning is turned on by default everywhere, and carefully turned off where it isn’t appropriate. A monospaced typeface’s application is ruined when automatic kerning is turned on. This is not the case with Normalize-OpenType.css; your code blocks have been preserved.
 
-![A kerning example.](examples/example-5.png)
+![A kerning example.](assets/example-5.png)
 
 ## …and more
 
