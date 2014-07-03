@@ -8,6 +8,14 @@ Adds OpenType features—ligatures, kerning, and more—to [Normalize.css](https
 
 Read the blog post: [Introducing Normalize-OpenType.css](http://kennethormandy.com/journal/normalize-opentype-css)
 
+[<img alt="Get the latest version of the CSS file" src="assets/download.svg" width="200px" />](https://raw.githubusercontent.com/kennethormandy/normalize-opentype.css/master/normalize-opentype.css)
+
+_Or use_
+
+```bash
+npm install kennethormandy/normalize-opentype.css
+```
+
 ## Ligatures
 
 First, normalize basic ligatures across browsers, and then get fancier, discretionary ligatures on `<h1>`, `<h2>`, and `<h3>`s.
@@ -40,9 +48,11 @@ There’s more optimisations included, so you don’t have to think about them: 
 
 ## Getting started
 
-Normalize-OpenType.css aims to be as easy to use as its namesake: [get the latest version of the CSS file](https://raw.githubusercontent.com/kennethormandy/normalize-opentype.css/master/normalize-opentype.css) or use the package manager of your choice, include the CSS file, and you’re done.
+Normalize-OpenType.css aims to be as easy to use as its namesake, Normalize.css. If it’s not that easy, please [open an issue](https://github.com/kennethormandy/normalize-opentype.css/issues). Get the latest version of the CSS file here:
 
-If it’s not that easy, please [open an issue](https://github.com/kennethormandy/normalize-opentype.css/issues).
+[<img alt="Get the latest version of the CSS file" src="assets/download.svg" width="200px" />](https://raw.githubusercontent.com/kennethormandy/normalize-opentype.css/master/normalize-opentype.css)
+
+Alternatively, use the package manager and build tool of your choice:
 
 #### With npm
 
