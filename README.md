@@ -8,7 +8,7 @@ Adds OpenType features—ligatures, kerning, and more—to [Normalize.css](https
 
 Read the blog post: [Introducing Normalize-OpenType.css](http://kennethormandy.com/journal/normalize-opentype-css)
 
-[<img alt="Get the latest version of the CSS file" src="assets/download.svg" width="150px" />](https://raw.githubusercontent.com/kennethormandy/normalize-opentype.png/master/normalize-opentype.css)
+[<img alt="Get the latest version of the CSS file" src="assets/download.png" width="150px" />](https://raw.githubusercontent.com/kennethormandy/normalize-opentype.png/master/normalize-opentype.css)
 
 _Or use_
 
@@ -50,7 +50,7 @@ There’s more optimisations included, so you don’t have to think about them: 
 
 Normalize-OpenType.css aims to be as easy to use as its namesake, Normalize.css. If it’s not that easy, please [open an issue](https://github.com/kennethormandy/normalize-opentype.css/issues). Get the latest version of the CSS file here:
 
-[<img alt="Get the latest version of the CSS file" src="assets/download.svg" width="150px" />](https://raw.githubusercontent.com/kennethormandy/normalize-opentype.png/master/normalize-opentype.css)
+[<img alt="Get the latest version of the CSS file" src="assets/download.png" width="150px" />](https://raw.githubusercontent.com/kennethormandy/normalize-opentype.png/master/normalize-opentype.css)
 
 Alternatively, use the package manager and build tool of your choice:
 
