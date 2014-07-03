@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Twitter test</title>
+    <style type="text/css">
+      @import url(http://fonts.googleapis.com/css?family=Fira+Sans);
+
+      .u-size1of4,.u-size2of8,.u-size3of12 {
+        width:25%!important
+      }
+
+      .Grid {
+        display:block;
+        font-size:0;
+        /*margin:0;
+        padding:0;
+        text-align:left*/
+      }
+
+      .Grid-cell {
+        /*-moz-box-sizing:border-box;
+        box-sizing:border-box;*/
+        display:inline-block;
+        font-size:14px;
+        /*margin:0;
+        padding:0;
+        text-align:left;
+        vertical-align:top;
+        width:100%*/
+      }
+
+      body, html {
+        font-family: "Fira Sans";
+        /* Uncommenting this line breaks the grid, see Issue #8 */
+        /* -webkit-font-feature-settings: "kern" 1, "smcp" 1;*/
+      }
+    </style>
+</head>
+<body>
+  <div class="Grid">
+    <div class="Grid-cell u-size1of4">
+    </div>
+
+    <div class="Grid-cell u-size3of4 ProfileCanopy-nav ProfileNav"
+    data-user-id="24974216">
+      <ul>
+        <li>One</li>
+        <li>Two</li>
+        <li>Three</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="Grid">
+    <div class="Grid-cell u-size1of4 Grid">
+      <ul>
+        <li>One</li>
+        <li>Two</li>
+        <li>Three</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
