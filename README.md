@@ -38,12 +38,6 @@ Kerning is turned on by default everywhere, and carefully turned off where it is
 
 There’s more optimisations included, so you don’t have to think about them: Lining, tabular numerals in code blocks, uppercase fallbacks for small capitals, and proper subscript and superscripts.
 
-## Caveats
-
-This library does the best it can with what it has. In order to use any of these optimisations, they must also be available in the font you are using.
-
-There are some potential stumbling blocks depending on where you are serving fonts from. For more details, see [the introductory blog post](http://kennethormandy.com/journal/normalize-opentype-css).
-
 ## Getting started
 
 Normalize-OpenType.css aims to be as easy to use as its namesake: [get the latest version of the CSS file](https://raw.githubusercontent.com/kennethormandy/normalize-opentype.css/master/normalize-opentype.css) or use the package manager of your choice, include the CSS file, and you’re done.
@@ -83,6 +77,14 @@ If you’re using a preprocessor through something like [Harp](http://harpjs.com
 @import "normalize";
 @import "normalize-opentype";
 ```
+
+### Caveats
+
+This library does the best it can with what it has. In order to use any of these optimisations, they must also be available in the font you are using.
+
+I’m working on some blog posts and documentation about this, and will be [sending them out via email](http://kennethormandy.com/journal/newsletter) if you’re interested.
+
+There’s also a bug in Open Sans on Windows 7, with IE10 and 11, that’s caused by `font-feature-settings`, which this stylesheet uses heavily. [We’re keeping an eye on it.](https://github.com/kennethormandy/normalize-opentype.css/issues/4)
 
 ## Running locally
 
