@@ -65,14 +65,14 @@
 
   /* Custom helpers */
 
-  .Test {
+  .Test, .Test-custom--off {
     /* Need to reset all existing font-feature-settings stuff to get clean
        results. Namely, ligatures on FF, IE, and everything on Safari */
 
-    -webkit-font-feature-settings: "kern" 0, "liga" 0, "dlig" 0, "alig" 0, "calt": 0, "salt" 0, "smcp" 0, "c2sc" 0;
-       -moz-font-feature-settings: "kern" 0, "liga" 0, "dlig" 0, "alig" 0, "calt": 0, "salt" 0, "smcp" 0, "c2sc" 0;
-        -ms-font-feature-settings: "kern" 0, "liga" 0, "dlig" 0, "alig" 0, "calt": 0, "salt" 0, "smcp" 0, "c2sc" 0;
-            font-feature-settings: "kern" 0, "liga" 0, "dlig" 0, "alig" 0, "calt": 0, "salt" 0, "smcp" 0, "c2sc" 0;
+    -webkit-font-feature-settings: "kern" 0, "liga" 0, "dlig" 0, "alig" 0, "calt" 0, "salt" 0, "smcp" 0, "c2sc" 0;
+       -moz-font-feature-settings: "kern" 0, "liga" 0, "dlig" 0, "alig" 0, "calt" 0, "salt" 0, "smcp" 0, "c2sc" 0;
+        -ms-font-feature-settings: "kern" 0, "liga" 0, "dlig" 0, "alig" 0, "calt" 0, "salt" 0, "smcp" 0, "c2sc" 0;
+            font-feature-settings: "kern" 0, "liga" 0, "dlig" 0, "alig" 0, "calt" 0, "salt" 0, "smcp" 0, "c2sc" 0;
 
   }
 
@@ -89,8 +89,12 @@
   }
 
   .Test-custom--klinicSlab {
-    /* TODO Use something on Google Fonts with an “st” ligature */
+    /* TODO: Change to CDN */
     font-family: "Klinic Slab";
+  }
+
+  .Test-custom--enemy {
+    font-family: "Enemy";
   }
 
   .Test-custom--ffskern0 {
@@ -179,6 +183,11 @@
       <span style="text-rendering: optimizeSpeed">control<br/>fl</span><br/>
       <span style="text-rendering: optimizeLegibility">fl.</span><br/>
       fl.</p>
+  </div>
+
+  <h3 class="Test-it">should have contextual alternates turned on</h3>
+  <div class="Test-run">
+    <p class="Test-custom--enemy" style="font-size: 5em"><span class="test-custom--off">control<br/>aaaaaaaa.</span><br/>aaaaaaaa.</p>
   </div>
 
   <h2 class="Test-describe"><code>h1</code>, <code>h2</code>, <code>h3</code>, <code>h4</code>, <code>h5</code>, <code>h6</code></h2>
