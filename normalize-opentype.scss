@@ -142,7 +142,7 @@ input[type="datetime-local"],
 input[type="number"],
 input[type="range"],
 input[type="tel"],
-input[type="week"], {
+input[type="week"] {
   font-feature-settings: "kern" 0, "liga" 1, "pnum" 1, "tnum" 0, "onum" 0, "lnum" 1, "zero" 0; /* 1. */
 }
 
