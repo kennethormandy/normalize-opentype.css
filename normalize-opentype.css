@@ -1,13 +1,25 @@
 /*! normalize-opentype v0.1.3 | MIT License | kennethormandy.com/journal/normalize-opentype-css */
 /**
- * 1. Turn on kerning, standard ligatures, and proportional, oldstyle numerals
+ * 1. Inherit style issues with custom selections, per robsterlini.co.uk/journal/opentype-and-selection-dont-mix
+ * 2. Turn on kerning, standard ligatures, and proportional, oldstyle numerals
  *    Turn off all other ligatures, tabular, lining numerals, and alternates
  */
+::-moz-selection {
+  color: inherit;
+  /* 1. */
+  text-shadow: inherit;
+  /* 1. */ }
+::selection {
+  color: inherit;
+  /* 1. */
+  text-shadow: inherit;
+  /* 1. */ }
+
 html, body {
   -webkit-font-feature-settings: "kern" 1, "liga" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 0;
   -moz-font-feature-settings: "kern" 1, "liga" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 0;
   font-feature-settings: "kern" 1, "liga" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 0;
-  /* 1. */ }
+  /* 3. */ }
 
 /* Headings
 ========================================================================== */
