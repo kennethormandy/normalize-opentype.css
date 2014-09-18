@@ -111,6 +111,13 @@ code {
     font-family: "Klinic Slab";
   }
 
+  .Test-custom--lavanderia {
+    /* TODO Use something on Google Fonts with Contextual Alternates */
+    font-family: "Lavanderia", cursive;
+    font-size: 5em;
+    font-weight: 600;
+  }
+
   .Test-custom--ffskern0 {
     -webkit-font-feature-settings: "kern" 0;
        -moz-font-feature-settings: "kern" 0;
@@ -147,6 +154,14 @@ code {
             font-feature-settings: "liga" 0, "kern" 0;
   }
 
+  .Test-custom--ffscalt0 {
+    -webkit-font-feature-settings: "calt" 0;
+       -moz-font-feature-settings: "calt" 0;
+        -ms-font-feature-settings: "calt" 0;
+            font-feature-settings: "calt" 0;
+  }
+
+
   .Test-custom--mark {
     background: tomato;
   }
@@ -170,17 +185,12 @@ code {
     <p class="Test-custom--sourceSansPro">Different Ga<span class="Test-custom--mark">st</span>own flowers</p>
   </div>
 
-  <!-- <h3 class="Test-it">should have contextual alternates when <code>font-family</code> includes <code>cursive</code></h3>
-  <div class="Test-run">
-    <p style="font-family: cursive;">Haven’t aaactuallllly decided how to do this yet</p>
-  </div> -->
-
   <h3 class="Test-it">should have kerning turned on</h3>
   <div class="Test-run">
     <p class="Test-custom--fira"><span class="Test-custom--ffskern0" style="border-right: 1px solid tomato">control<br/>AVATAR LT.</span><br/><span style="border-right: 1px solid tomato">AVATAR LT.</span></p>
   </div>
 
-  <h3 class="Test-it">should have oldstyle numbers turned on</h3>
+  <h3 class="Test-it">should have oldstyle numbers turned on (opinionated)</h3>
   <div class="Test-run">
     <p class="Test-custom--fira"><span class="Test-custom--ffskern0 Test-custom--ffslnum">control 1990<span style="color: tomato">■</span>.</span> 1990<span style="color: tomato">■</span>.</p>
   </div>
@@ -188,6 +198,11 @@ code {
   <h3 class="Test-it">should have proportional numbers turned on</h3>
   <div class="Test-run">
     <p class="Test-custom--fira"><span class="Test-custom--ffstnum Test-custom-firaMono">control<br/><span style="border-right: 1px solid tomato">1990</span>.</span><br/><span style="border-right: 1px solid tomato">1990</span>.</p>
+  </div>
+
+  <h3 class="Test-it">should have contextual alternates turned on</h3>
+  <div class="Test-run">
+    <p class="Test-custom--lavanderia">control<br/><span style="border-right: 1px solid tomato" class="Test-custom--ffscalt0">aaaa</span>.</span><br/><span style="border-right: 1px solid tomato">aaaa</span>.</p>
   </div>
 
   <!-- This test doesn’t really help right now other than through documentation -->
