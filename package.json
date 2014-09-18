@@ -1,6 +1,6 @@
 {
   "name": "normalize-opentype",
-  "version": "0.1.4",
+  "version": "0.2.0",
   "description": "Adds OpenType features—ligatures, kerning, and more—to Normalize.css.",
   "homepage": "http://kennethormandy.com/journal/normalize-opentype-css",
   "author": "Kenneth Ormandy <kenneth@chloi.io>",

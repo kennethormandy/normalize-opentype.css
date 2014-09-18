@@ -1,8 +1,8 @@
 {
   "name": "normalize-opentype.css",
   "repo": "kennethormandy/normalize-opentype.css",
-  "description": "Add sound OpenType defaults to Normalize.css",
-  "version": "0.1.4",
+  "description": "Adds OpenType features—ligatures, kerning, and more—to Normalize.css.",
+  "version": "0.2.0",
   "keywords": [
     "normalize",
     "type",
