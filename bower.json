@@ -1,11 +1,11 @@
 {
   "name": "normalize-opentype.css",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "homepage": "http://kennethormandy.com/journal/normalize-opentype-css",
   "authors": [
     "Kenneth Ormandy <kenneth@chloi.io>"
   ],
-  "description": "Add sound OpenType defaults to Normalize.css",
+  "description": "Adds OpenType features—ligatures, kerning, and more—to Normalize.css.",
   "main": "normalize-opentype.css",
   "keywords": [
     "normalize",
