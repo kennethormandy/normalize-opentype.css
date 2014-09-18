@@ -1,6 +1,6 @@
 The MIT License (MIT)
 
-Copyright © 2014 Kenneth Ormandy & Chloi Inc.
+Copyright © 2014 [Kenneth Ormandy](http://kennethormandy.com) & [Chloi Inc.](http://chloi.io)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the “Software”), to deal in

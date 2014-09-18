@@ -4,7 +4,7 @@ Thanks for considering contributing to normalize-opentype.css!
 
 If you’re new to all this GitHub, Open Source, JavaScript, Node.js, testing, wow all this stuff seems really difficult I just want to make my sites better stuff, I get it. I’m still there, too.
 
-Feel free to [send me an email](kenneth@chloi.io) or [open an issue here](http://github.com/kennethormandy/normalize-opentype.css/issues) and I’ll do my best to share some resources that have helped me out. No promises—I’m still learning, too—but I can say it would be great to have you stay around, or be involved in any capacity, if you’re interested.
+Feel free to [send me an email](mailto:kenneth@chloi.io) or [open an issue here](http://github.com/kennethormandy/normalize-opentype.css/issues) and I’ll do my best to share some resources that have helped me out. No promises—I’m still learning, too—but I can say it would be great to have you stay around, or be involved in any capacity, if you’re interested.
 
 ## Opening issues
 
@@ -19,7 +19,7 @@ We love pull requests. Here’s a quick guide:
 1. [Fork this repository](https://github.com/kennethormandy/normalize-opentype.css/fork) and then clone it locally:
 
   ```bash
-  git clone https://github.com/kennethormandy/normalize-opentype
+  git clone https://github.com/kennethormandy/normalize-opentype.css
   cd normalize-opentype
   npm install
   ```
