@@ -118,17 +118,8 @@ input[type="color"], input[type="date"], input[type="datetime"], input[type="dat
  * 1. Turns on tabular, lining numerals and slashed zero
  *    Turns off kerning, as it could impact tabular numerals
  */
-table {
+tbody {
   -webkit-font-feature-settings: "kern" 0, "liga" 1, "calt" 1, "pnum" 0, "tnum" 1, "onum" 0, "lnum" 1, "zero" 1;
      -moz-font-feature-settings: "kern" 0, "liga" 1, "calt" 1, "pnum" 0, "tnum" 1, "onum" 0, "lnum" 1, "zero" 1;
           font-feature-settings: "kern" 0, "liga" 1, "calt" 1, "pnum" 0, "tnum" 1, "onum" 0, "lnum" 1, "zero" 1;
   /* 1. */ }
-
-/**
- * 1. Revert to defaults for table headings
- */
-table thead, table tfoot {
-  -webkit-font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 0;
-     -moz-font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 0;
-          font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 0;
-  /* 2. */ }
