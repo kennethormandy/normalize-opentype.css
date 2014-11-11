@@ -214,10 +214,15 @@ input[type="week"] {
 ========================================================================== */
 
 /**
- * 1. Turns on tabular, lining numerals and slashed zero
- *    Turns off kerning, as it could impact tabular numerals
+ * 1. Resets tables to the same settings as the body.
+ * 2. Turns on tabular, lining numerals and slashed zero
  */
 
-tbody {
-  font-feature-settings: "kern" 0, "liga" 1, "calt" 1, "pnum" 0, "tnum" 1, "onum" 0, "lnum" 1, "zero" 1; /* 1. */
+table {
+  @extend body; /* 1.*/
+}
+
+tbody,
+caption {
+  font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 0, "tnum" 1, "onum" 0, "lnum" 1, "zero" 1; /* 1. */
 }
