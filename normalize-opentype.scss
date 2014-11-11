@@ -8,7 +8,7 @@
 
 ::selection {
   color: inherit; /* 1. */
-  text-shadow: inherit; /* 1. */
+  text-shadow: inherit; /* 2. */
 }
 
 html,
@@ -224,5 +224,5 @@ table {
 
 tbody,
 caption {
-  font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 0, "tnum" 1, "onum" 0, "lnum" 1, "zero" 1; /* 1. */
+  font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 0, "tnum" 1, "onum" 0, "lnum" 1, "zero" 1; /* 2. */
 }
