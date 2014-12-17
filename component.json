@@ -2,7 +2,7 @@
   "name": "normalize-opentype.css",
   "repo": "kennethormandy/normalize-opentype.css",
   "description": "Adds OpenType features—ligatures, kerning, and more—to Normalize.css.",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "keywords": [
     "normalize",
     "type",
