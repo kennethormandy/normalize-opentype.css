@@ -5,7 +5,6 @@
   "homepage": "http://kennethormandy.com/journal/normalize-opentype-css",
   "author": "Kenneth Ormandy <kenneth@chloi.io>",
   "license": "MIT",
-  "private": true,
   "repository": "git@github.com:kennethormandy/normalize-opentype.css.git",
   "keywords": [
     "normalize",
