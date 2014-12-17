@@ -13,7 +13,7 @@ Read the blog post: [Introducing Normalize-OpenType.css](http://kennethormandy.c
 _Or use_
 
 ```bash
-npm install kennethormandy/normalize-opentype.css
+npm install normalize-opentype.css
 ```
 
 ## Ligatures
@@ -57,7 +57,7 @@ Alternatively, use the package manager and build tool of your choice:
 #### With npm
 
 ```
-npm install kennethormandy/normalize-opentype.css
+npm install normalize-opentype.css
 ```
 
 #### With Component
