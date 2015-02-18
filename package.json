@@ -3,7 +3,7 @@
   "version": "0.2.3",
   "description": "Adds OpenType features—ligatures, kerning, and more—to Normalize.css.",
   "homepage": "http://kennethormandy.com/journal/normalize-opentype-css",
-  "author": "Kenneth Ormandy <kenneth@chloi.io>",
+  "author": "Kenneth Ormandy <hello@kennethormandy.com>",
   "license": "MIT",
   "repository": "git@github.com:kennethormandy/normalize-opentype.css.git",
   "keywords": [
@@ -22,7 +22,7 @@
   },
   "devDependencies": {
     "normalize.css": "<4.0.0",
-    "node-sass": "~1.2.3",
+    "node-sass": "~2.0.1",
     "autoprefixer": "~4.0.0"
   }
 }
