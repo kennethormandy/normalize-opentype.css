@@ -133,4 +133,4 @@ Additional tests use [Fira](https://github.com/mozilla/Fira) from Mozilla, and [
 
 [The MIT License (MIT)](LICENSE.md)
 
-Copyright © 2014 [Kenneth Ormandy](http://kennethormandy.com) & [Chloi Inc.](http://chloi.io)
+Copyright © 2014–2015 [Kenneth Ormandy](http://kennethormandy.com)
