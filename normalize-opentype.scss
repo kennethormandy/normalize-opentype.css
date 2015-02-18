@@ -4,6 +4,7 @@
  * 1. Inherit style issues with custom selections, per robsterlini.co.uk/journal/opentype-and-selection-dont-mix
  * 2. Turn on kerning, standard ligatures, and proportional, oldstyle numerals
  *    Turn off all other ligatures, tabular, lining numerals, and alternates
+      Uses same settings for tables
  * 3. Hard-codes fallback text selection for issue #18, color is Chrome’s per via http://stackoverflow.com/a/16094931/864799
  */
 
@@ -14,7 +15,8 @@
 }
 
 html,
-body {
+body,
+table {
   font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 0; /* 2. */
 }
 
@@ -216,15 +218,10 @@ input[type="week"] {
 ========================================================================== */
 
 /**
- * 1. Resets tables to the same settings as the body.
- * 2. Turns on tabular, lining numerals and slashed zero
+ * 1. Turns on tabular, lining numerals and slashed zero
  */
-
-table {
-  @extend body; /* 1.*/
-}
 
 tbody,
 caption {
-  font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 0, "tnum" 1, "onum" 0, "lnum" 1, "zero" 1; /* 2. */
+  font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 0, "tnum" 1, "onum" 0, "lnum" 1, "zero" 1; /* 1. */
 }
