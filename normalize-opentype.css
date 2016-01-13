@@ -71,7 +71,7 @@ pre, kbd, samp, code {
   /* 1. */ }
 
 /**
- * 1. Turn on proper supercript numerals
+ * 1. Turn on proper superscript numerals
  */
 sup {
   -webkit-font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 0, "sups" 1;
