@@ -1,3 +1,7 @@
+**Note** You might also like my more recent take on this project, [Utility OpenType](https://github.com/kennethormandy/utility-opentype): CSS utility classes for advanced typographic features.
+
+***
+
 [![Normalize-OpenType.css wordmark](assets/wordmark.png)](http://kennethormandy.com/journal/normalize-opentype-css)
 
 ***
